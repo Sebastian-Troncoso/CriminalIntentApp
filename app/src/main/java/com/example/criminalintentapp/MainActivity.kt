@@ -2,7 +2,7 @@ package com.example.criminalintentapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.criminalintentapp.controller.CrimeFragment
+import com.example.criminalintentapp.controller.CrimeListFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         // Adding fragment to the fragmentManager's list of fragments
         val currentFragment = supportFragmentManager.findFragmentById(R.id.fragment_container)
         if (currentFragment == null) {
-            val fragment = CrimeFragment()
+            val fragment = CrimeListFragment.newInstance()
             supportFragmentManager
                 .beginTransaction()
                 .add(R.id.fragment_container, fragment)
