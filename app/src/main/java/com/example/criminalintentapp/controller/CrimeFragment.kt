@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment
 import com.example.criminalintentapp.R
 import com.example.criminalintentapp.model.Crime
 
-class CrimeFragment: Fragment() {
+class CrimeFragment : Fragment() {
     private lateinit var crime: Crime
     private lateinit var titleFiled: EditText
     private lateinit var dateButton: Button
@@ -59,6 +59,7 @@ class CrimeFragment: Fragment() {
             ) {
 
             }
+
             override fun onTextChanged(
                 sequence: CharSequence?,
                 start: Int,
@@ -75,7 +76,7 @@ class CrimeFragment: Fragment() {
         titleFiled.addTextChangedListener(titleWatcher)
 
         solvedCheckBox.apply {
-            setOnCheckedChangeListener {_, isChecked ->
+            setOnCheckedChangeListener { _, isChecked ->
                 crime.isSolved = isChecked
             }
         }

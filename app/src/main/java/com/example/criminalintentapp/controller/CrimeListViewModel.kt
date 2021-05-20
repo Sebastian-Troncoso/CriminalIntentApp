@@ -1,6 +1,5 @@
 package com.example.criminalintentapp.controller
 
-
 import androidx.lifecycle.ViewModel
 import com.example.criminalintentapp.model.Crime
 
